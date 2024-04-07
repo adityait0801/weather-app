@@ -1,1 +1,2 @@
 export const IMG_URL = 'https://www.google.com/imgres?q=weather%20app%20background%20images%20png&imgurl=https%3A%2F%2Fpng.pngtree.com%2Fthumb_back%2Ffh260%2Fbackground%2F20201012%2Fpngtree-white-cloud-on-blue-sky-weather-background-image_410050.jpg&imgrefurl=https%3A%2F%2Fpngtree.com%2Ffree-backgrounds-photos%2Fweather&docid=0Tx0XLgLeQ9lZM&tbnid=OUkxI5A8V97OiM&vet=12ahUKEwi5pseL6bCFAxUTrlYBHRX0AvAQM3oECBUQAA..i&w=555&h=260&hcb=2&ved=2ahUKEwi5pseL6bCFAxUTrlYBHRX0AvAQM3oECBUQAA';
+

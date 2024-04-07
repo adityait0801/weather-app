@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import { IMG_URL } from "../utils/Contants";
 
 const Body = () => {
   const navigate = useNavigate();
