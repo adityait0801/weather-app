@@ -9,17 +9,19 @@ const Body = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
+    <div className="">
       <div>
-        <img src={IMG_URL} alt="Weather Image" className="mb-8" />
+        <img 
+        className="h-full w-full absolute"
+        src={IMG_URL}
+        alt="Weather Image"
+        />
       </div>
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold">Welcome to the Weather App</h1>
-        <h5 className="text-sm">Here you can find the weather of different cities</h5>
-      </div>
-      <div>
-        <button onClick={handleClick} className="bg-blue-500 text-white px-4 py-2 rounded-lg focus:outline-none focus:ring focus:border-blue-300">
-          Here We Go!
+      <div className="absolute h-screen flex flex-col justify-center items-center right-0 left-0 text-black bg-opacity-10">
+        <h1 className="text-5xl font-bold text-center m-">Welcome to the Weather App</h1>
+        <h5 className="text-xl">Here you can find the weather of different cities</h5>
+        <button onClick={handleClick} className="bg-blue-500 text-white px-4 py-2 rounded-lg m-2">
+          Here We Go  !!
         </button>
       </div>
     </div>

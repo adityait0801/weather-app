@@ -45,32 +45,35 @@ const City = () => {
     return (
         <div>
             <div>
-                <img src={IMG_URL} alt="Weather-Image"/>
+                <img
+                 className="h-full w-full absolute"
+                src={IMG_URL} 
+                alt="Weather-Image"/>
             </div>
-            <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center">
-            <form onSubmit={handleSubmit} className="flex items-center">
-                <input
-                type="text"
-                placeholder="Enter city name"
-                value={city}
-                onChange={(e) => setCity(e.target.value)}
-                className="rounded-l-lg p-2 focus:outline-none focus:ring focus:border-blue-300 w-64"
-                />
-                <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-r-lg focus:outline-none focus:ring focus:border-blue-300">Get Weather</button>
-            </form>
-      {error && <p className="text-red-500 mt-2">{error}</p>}
-      {weatherData && weatherData.weather && weatherData.weather.length > 0 && (
-          <div className="mt-4 p-4 border border-gray-300 rounded-lg">
-            <h2 className="text-xl font-semibold mb-2">Current Weather in {weatherData.name}</h2>
-            <p className="text-gray-700">Temperature: {weatherData.main.temp}°C</p>
-            <p className="text-gray-700">Weather: {weatherData.weather[0].main}</p>
-            <p className="text-gray-700">Description: {weatherData.weather[0].description}</p>
-            <p className="text-gray-700">Humidity: {weatherData.main.humidity}%</p>
-            <p className="text-gray-700">Wind Speed: {weatherData.wind.speed} m/s</p>
-          </div>
-        )}
-    </div>
-        </div>
+            <div className="absolute h-screen flex flex-col justify-center items-center right-0 left-0 text-black bg-opacity-10">
+                <form onSubmit={handleSubmit} className="flex items-center">
+                    <input
+                    type="text"
+                    placeholder="Enter city name"
+                    value={city}
+                    onChange={(e) => setCity(e.target.value)}
+                    className="rounded-lg p-2 w-64"
+                    />
+                    <button type="submit" className="bg-blue-500 text-white px-4 py-2 rounded-r-lg focus:outline-none focus:ring focus:border-blue-300">Get Weather</button>
+                </form>
+                    {error && <p className="text-red-500 mt-2">{error}</p>}
+                    {weatherData && weatherData.weather && weatherData.weather.length > 0 && (
+                        <div className="mt-4 p-4 border border-gray-300 rounded-lg">
+                            <h2 className="text-2xl font-bold mb-2">Current Weather in {weatherData.name}</h2>
+                            <p className="text-black font-bold ">Temperature: {weatherData.main.temp}°C</p>
+                            <p className="text-black font-bold ">Weather: {weatherData.weather[0].main}</p>
+                            <p className="text-black font-bold ">Description: {weatherData.weather[0].description}</p>
+                            <p className="text-black font-bold ">Humidity: {weatherData.main.humidity}%</p>
+                            <p className="text-black font-bold ">Wind Speed: {weatherData.wind.speed} m/s</p>
+                        </div>
+                        )}
+             </div>
+ </div>
     )
 }
 
