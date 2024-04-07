@@ -6,6 +6,7 @@ import Header from './components/Header';
 import { Outlet } from "react-router-dom";
 import Body from './components/Body';
 import City from './components/City';
+import Error from './components/Error';
 
 const AppLayout = () => {
   return ( 
@@ -29,7 +30,8 @@ const appRouter = createBrowserRouter ([
         path : '/city', 
         element : <City/>
       }
-    ]
+    ],
+    errorElement:<Error/>
   }
 ])
 
